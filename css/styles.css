@@ -39,6 +39,7 @@ a {
   position: fixed;
   width: 100%;
   max-width: 1400px;
+  transition: transform 0.5s ease;
 }
 
 .landing_page_navbar {
