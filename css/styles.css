@@ -69,6 +69,12 @@ a {
   text-align: center;
 }
 
+.navbar_title:hover,
+.landing_page_title:hover {
+  color: #00f2ff;
+  cursor: pointer;
+}
+
 .navbar_title {
   text-align: center;
 }
