@@ -5,12 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SMART PAGO MOVIL</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
   </head>
   <link />
   <body class="body-blue">
-    <h1>SIGNUP</h1>
-    <a href="../index.html">PÁGINA PRINCIPAL</a>
-    <a href="login.html">LOGIN</a>
+    <div class="signup__container">
+      <div class="signup">
+        <div class="signup__div-principal">
+          <h1>Regístrese</h1>
+          <form class="signup__form">
+            <fieldset class="signup__fieldset">
+              <label for="email" class="signup__label"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="signup__input"
+                placeholder="Correo Electrónico"
+              />
+            </fieldset>
+            <fieldset class="signup__fieldset">
+              <label for="password" class="signup__label">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                class="signup__input"
+                placeholder="Contraseña"
+              />
+            </fieldset>
+            <button class="signup__button">Registrarse</button>
+          </form>
+          <hr />
+          <p>
+            ¿Ya tiene una cuenta?
+            <a href="login.html" class="login__link">Iniciar Sesión</a>
+          </p>
+        </div>
+        <div class="signup__div-IMG">
+          <a href="../index.html" class="index__link">SMART PAGO MÓVIL</a>
+          <img src="../assets/BG_SIGNUP.jpg" class="signupIMG" />
+        </div>
+      </div>
+    </div>
   </body>
   <script src="../js/signup.js"></script>
 </html>
