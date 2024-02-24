@@ -6,12 +6,10 @@
     <title>SMART PAGO MOVIL</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/login.css" />
+    <link rel="icon" href="../assets/smartphone.ico" type="image/x-icon" />
   </head>
   <link />
   <body class="body-blue">
-    <!-- <h1>LOGIN</h1>
-    <a href="../index.html">PÁGINA PRINCIPAL</a>
-    <a href="signup.html">SIGN UP</a>     -->
     <div class="login__container">
       <div class="login">
         <div class="login__div-IMG">
@@ -24,6 +22,7 @@
             <fieldset class="login__fieldset">
               <label for="email" class="login__label">Correo Electrónico</label>
               <input
+                autocomplete="email"
                 type="email"
                 id="email"
                 class="login__input"
@@ -34,12 +33,13 @@
               <label for="password" class="login__label">Contraseña</label>
               <input
                 type="password"
+                autocomplete="current-password"
                 id="password"
                 class="login__input"
                 placeholder="Contraseña"
               />
             </fieldset>
-            <button class="login__button">Ingresar</button>
+            <button class="login__button" type="submit">Ingresar</button>
           </form>
           <hr />
           <p>
