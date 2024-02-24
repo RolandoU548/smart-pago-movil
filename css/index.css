@@ -32,13 +32,19 @@
 .landing_page {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .landing_page_title {
   font-size: 4rem;
-  text-align: center;
+}
+
+.landing_page_subtitle {
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .navbar_title:hover {
@@ -62,8 +68,8 @@
 
 .login_button,
 .signup_button {
-  min-width: 6rem;
-  padding: 1rem;
+  min-width: 5rem;
+  padding: 0.8rem;
   border-radius: 5rem;
   border: none;
   background-image: linear-gradient(to right, #ffffff, #a3a3a3);
@@ -77,9 +83,15 @@
   cursor: pointer;
 }
 
+.logo {
+  width: 2rem;
+  height: auto;
+}
+
 .toggle_button,
 .toggle_button_navbar,
-.toggle_layer {
+.toggle_layer,
+.logo {
   display: none;
   position: absolute;
 }
@@ -95,12 +107,37 @@
   .toggle_button {
     display: block;
     z-index: 30;
+    width: 2.5rem;
+    height: 2.5rem;
     right: 10px;
     top: 10px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+  }
+  .toggle_button:hover {
+    background-color: rgba(100, 100, 100, 0.6);
+  }
+  .bars {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .backArrow {
+    color: white;
+    font-size: 1.5rem;
   }
   .toggle_button_navbar {
     display: block;
+    border: none;
+    background-color: transparent;
     left: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .logo {
+    display: block;
+    right: 10px;
     top: 10px;
   }
   .landing_page_header {
@@ -120,5 +157,47 @@
   }
   .landing_page_navbar_ul {
     flex-direction: column;
+  }
+}
+
+/* toast */
+#toastBox {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* .toast {
+  position: fixed;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  width: 20rem;
+  height: 4rem;
+  max-width: 40%;
+  color: #1e293b;
+  background-color: white;
+  right: 1rem;
+  bottom: 1rem;
+  transform: translateX(120%);
+  animation: aparecer 2.5s ease-in-out infinite;
+} */
+
+@keyframes aparecer {
+  30% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(120%);
   }
 }
