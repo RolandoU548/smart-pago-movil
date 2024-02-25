@@ -1,4 +1,4 @@
-import { encontrarUsuario, iniciarSesion, mostrarToast } from "./utils.js";
+import { findUser, logIn, showToast } from "./utils.js";
 
 let inputEmail = document.getElementById("email");
 let inputPassword = document.getElementById("password");
@@ -9,18 +9,18 @@ form.addEventListener("submit", (e) => {
   let email = inputEmail.value;
   let password = inputPassword.value;
   //faltan validaciones
-  let usuario = encontrarUsuario(email);
-  if (usuario) {
+  let user = findUser(email);
+  if (user) {
     if (password.length >= 6) {
-      if (usuario.password == password) {
+      if (user.password == password) {
         form.reset();
-        iniciarSesion();
+        logIn();
       } else {
-        mostrarToast("Contraseña Incorrecta", "error");
+        showToast("Contraseña Incorrecta", "error");
       }
     }
   } else {
-    mostrarToast("Usuario No Existe", "error");
+    showToast("Usuario No Existe", "error");
   }
   if (password.length < 6) {
     alert("La contraseña debe tener por lo menos 6 dígitos");

@@ -17,14 +17,14 @@
   max-width: 1400px;
 }
 
-.signup__div-principal,
+.signup__div-main,
 .signup__div-IMG,
 .signup__button {
   width: 100%;
   overflow: hidden;
 }
 
-.signup__div-principal {
+.signup__div-main {
   text-align: center;
   padding: 3vw;
   display: flex;

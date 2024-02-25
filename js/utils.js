@@ -1,4 +1,4 @@
-export const mostrarToast = (texto, iconP = "") => {
+export const showToast = (texto, iconP = "") => {
   let body = document.getElementsByTagName("body")[0];
   let toastBox = document.createElement("div");
   toastBox.id = "toastBox";
@@ -24,7 +24,7 @@ export const mostrarToast = (texto, iconP = "") => {
   }, 4000);
 };
 
-export const encontrarUsuario = (email) => {
+export const findUser = (email) => {
   for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
     if (key == email) return JSON.parse(localStorage.getItem(key));
@@ -32,12 +32,12 @@ export const encontrarUsuario = (email) => {
   return false;
 };
 
-export const iniciarSesion = () => {
+export const logIn = () => {
   localStorage.setItem("logged", "true");
   window.location.href = "./private.html";
 };
 
-export const cerrarSesion = () => {
+export const logOut = () => {
   localStorage.setItem("logged", "false");
   window.location.href = "../index.html";
 };

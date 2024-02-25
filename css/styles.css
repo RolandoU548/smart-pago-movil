@@ -75,11 +75,11 @@ a {
   justify-content: center;
   position: relative;
   transform: translateX(120%);
-  animation: aparecer 4s ease-in-out forwards;
+  animation: appear 4s ease-out forwards;
   font-weight: bold;
 }
 
-@keyframes aparecer {
+@keyframes appear {
   10% {
     transform: translateX(0%);
   }

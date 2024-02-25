@@ -17,14 +17,14 @@
   max-width: 1400px;
 }
 
-.login__div-principal,
+.login__div-main,
 .login__div-IMG,
 .login__button {
   width: 100%;
   overflow: hidden;
 }
 
-.login__div-principal {
+.login__div-main {
   text-align: center;
   padding: 3vw;
   display: flex;
