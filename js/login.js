@@ -6,9 +6,6 @@ const encontrarUsuario = (email) => {
   }
   return false;
 };
-
-console.log(encontrarUsuario("rolandou548@gmail.com"));
-
 let inputEmail = document.getElementById("email");
 let inputPassword = document.getElementById("password");
 let form = document.querySelector(".login__form");

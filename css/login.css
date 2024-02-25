@@ -118,8 +118,22 @@
   border: none;
 }
 
+.backLink {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .login__div-IMG {
     display: none;
+  }
+  .backLink {
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+  .backArrow {
+    font-size: 1.2rem;
   }
 }
