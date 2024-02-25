@@ -19,13 +19,13 @@ form.addEventListener("submit", (e) => {
   let emailRegex =
     /^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/;
   if (!emailRegex.test(email)) {
-    alert("Email Inválido");
+    showToast("Email Inválido", "error");
   }
   if (findUser(email)) {
     showToast("Usuario Ya Existe", "error");
   }
   if (password.length < 6) {
-    alert("La contraseña debe tener por lo menos 6 dígitos");
+    showToast("La contraseña debe tener al menos 6 dígitos", "error");
   }
   if (emailRegex.test(email) && !findUser(email) && password.length >= 6) {
     form.reset();

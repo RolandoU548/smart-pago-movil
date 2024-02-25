@@ -1,7 +1,4 @@
 export const showToast = (texto, iconP = "") => {
-  let body = document.getElementsByTagName("body")[0];
-  let toastBox = document.createElement("div");
-  toastBox.id = "toastBox";
   let toast = document.createElement("div");
   toast.classList.add("toast");
   let icon = "";
@@ -16,9 +13,14 @@ export const showToast = (texto, iconP = "") => {
     toast.classList.add("warn");
   }
   toast.innerHTML = icon + " " + texto;
+  let toastBox = document.querySelector("#toastBox");
+  if (!toastBox) {
+    let body = document.getElementsByTagName("body")[0];
+    toastBox = document.createElement("div");
+    toastBox.id = "toastBox";
+    body.appendChild(toastBox);
+  }
   toastBox.appendChild(toast);
-  body.appendChild(toastBox);
-  toast.setAttribute("data-content", "10s");
   setTimeout(() => {
     toast.remove();
   }, 4000);

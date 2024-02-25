@@ -23,6 +23,6 @@ form.addEventListener("submit", (e) => {
     showToast("Usuario No Existe", "error");
   }
   if (password.length < 6) {
-    alert("La contraseña debe tener por lo menos 6 dígitos");
+    showToast("La contraseña debe tener al menos 6 dígitos", "error");
   }
 });
