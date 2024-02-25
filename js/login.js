@@ -1,11 +1,5 @@
-const encontrarUsuario = (email) => {
-  for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    let value = JSON.parse(localStorage.getItem(key));
-    if (value.email == email) return value;
-  }
-  return false;
-};
+import { encontrarUsuario, iniciarSesion, mostrarToast } from "./utils.js";
+
 let inputEmail = document.getElementById("email");
 let inputPassword = document.getElementById("password");
 let form = document.querySelector(".login__form");
@@ -15,8 +9,20 @@ form.addEventListener("submit", (e) => {
   let email = inputEmail.value;
   let password = inputPassword.value;
   //faltan validaciones
-  encontrarUsuario(email, password);
-  localStorage.setItem("logged", "true");
-  window.location.href = "./private.html";
-  form.reset();
+  let usuario = encontrarUsuario(email);
+  if (usuario) {
+    if (password.length >= 6) {
+      if (usuario.password == password) {
+        form.reset();
+        iniciarSesion();
+      } else {
+        mostrarToast("Contraseña Incorrecta", "error");
+      }
+    }
+  } else {
+    mostrarToast("Usuario No Existe", "error");
+  }
+  if (password.length < 6) {
+    alert("La contraseña debe tener por lo menos 6 dígitos");
+  }
 });

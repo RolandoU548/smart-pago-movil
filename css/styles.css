@@ -72,13 +72,15 @@ a {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   transform: translateX(120%);
   animation: aparecer 4s ease-in-out forwards;
+  font-weight: bold;
 }
 
 @keyframes aparecer {
-  20% {
+  10% {
     transform: translateX(0%);
   }
   90% {

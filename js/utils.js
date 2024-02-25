@@ -1,5 +1,7 @@
-export const showToast = (texto, iconP = "") => {
-  let toastBox = document.querySelector("#toastBox");
+export const mostrarToast = (texto, iconP = "") => {
+  let body = document.getElementsByTagName("body")[0];
+  let toastBox = document.createElement("div");
+  toastBox.id = "toastBox";
   let toast = document.createElement("div");
   toast.classList.add("toast");
   let icon = "";
@@ -15,8 +17,27 @@ export const showToast = (texto, iconP = "") => {
   }
   toast.innerHTML = icon + " " + texto;
   toastBox.appendChild(toast);
+  body.appendChild(toastBox);
   toast.setAttribute("data-content", "10s");
   setTimeout(() => {
     toast.remove();
   }, 4000);
+};
+
+export const encontrarUsuario = (email) => {
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    if (key == email) return JSON.parse(localStorage.getItem(key));
+  }
+  return false;
+};
+
+export const iniciarSesion = () => {
+  localStorage.setItem("logged", "true");
+  window.location.href = "./private.html";
+};
+
+export const cerrarSesion = () => {
+  localStorage.setItem("logged", "false");
+  window.location.href = "../index.html";
 };
