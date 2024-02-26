@@ -34,12 +34,20 @@ export const findUser = (email) => {
   return false;
 };
 
+export const checkLogIn = () => {
+  if (!(localStorage.getItem("logged") == "true")) {
+    window.location.href = "../index.html";
+  }
+};
+
 export const logIn = () => {
   localStorage.setItem("logged", "true");
+  localStorage.setItem("loggedFirstTime", "true");
   window.location.href = "./private.html";
 };
 
 export const logOut = () => {
   localStorage.setItem("logged", "false");
+  localStorage.setItem("loggedFirstTime", "false");
   window.location.href = "../index.html";
 };
