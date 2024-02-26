@@ -6,8 +6,9 @@ let form = document.querySelector(".signup__form");
 
 const createUser = (email, password) => {
   let user = {
-    email: email,
-    password: password,
+    email,
+    password,
+    amount: 200,
   };
   localStorage.setItem(email, JSON.stringify(user));
 };
@@ -15,7 +16,6 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let email = inputEmail.value;
   let password = inputPassword.value;
-  //faltan validaciones
   let emailRegex =
     /^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/;
   if (!emailRegex.test(email)) {

@@ -8,7 +8,6 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let email = inputEmail.value;
   let password = inputPassword.value;
-  //faltan validaciones
   let user = findUser(email);
   if (user) {
     if (password.length >= 6) {
