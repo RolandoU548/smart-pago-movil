@@ -63,6 +63,7 @@ export const getActualUser = () => {
 export const logOut = () => {
   localStorage.setItem("logged", "false");
   localStorage.setItem("loggedFirstTime", "false");
+  localStorage.setItem("loggedOut", "true");
   localStorage.setItem("actualUser", false);
   window.location.href = "../index.html";
 };

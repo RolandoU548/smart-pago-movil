@@ -1,3 +1,10 @@
+import { showToast } from "./utils.js";
+
+if (localStorage.getItem("loggedOut") == "true") {
+  showToast("Sesión Cerrada", "check");
+  localStorage.setItem("loggedOut", "false");
+}
+
 let landing_page_header = document.querySelector(".landing_page_header");
 let toggle_button_navbar = document.querySelector(".toggle_button_navbar");
 let toggle_button = document.querySelector(".toggle_button");
