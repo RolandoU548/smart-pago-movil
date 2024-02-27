@@ -123,6 +123,9 @@
 }
 
 @media (max-width: 600px) {
+  .signup {
+    height: 70%;
+  }
   .signup__div-IMG {
     display: none;
   }

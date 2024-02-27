@@ -158,4 +158,7 @@
   .landing_page_navbar_ul {
     flex-direction: column;
   }
+  .landing_page_navbar_ul li:first-child {
+    margin-top: 1.5rem;
+  }
 }
