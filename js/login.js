@@ -13,7 +13,7 @@ form.addEventListener("submit", (e) => {
     if (password.length >= 6) {
       if (user.password == password) {
         form.reset();
-        logIn();
+        logIn(email);
       } else {
         showToast("Contraseña Incorrecta", "error");
       }

@@ -40,14 +40,29 @@ export const checkLogIn = () => {
   }
 };
 
-export const logIn = () => {
+export const createUser = (email, password) => {
+  let user = {
+    email,
+    password,
+    amount: 200,
+  };
+  localStorage.setItem(email, JSON.stringify(user));
+};
+
+export const logIn = (email) => {
   localStorage.setItem("logged", "true");
   localStorage.setItem("loggedFirstTime", "true");
+  localStorage.setItem("actualUser", email);
   window.location.href = "./private.html";
+};
+
+export const getActualUser = () => {
+  return findUser(localStorage.getItem("actualUser"));
 };
 
 export const logOut = () => {
   localStorage.setItem("logged", "false");
   localStorage.setItem("loggedFirstTime", "false");
+  localStorage.setItem("actualUser", false);
   window.location.href = "../index.html";
 };

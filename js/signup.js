@@ -1,17 +1,9 @@
-import { findUser, logIn, showToast } from "./utils.js";
+import { findUser, createUser, logIn, showToast } from "./utils.js";
 
 let inputEmail = document.getElementById("email");
 let inputPassword = document.getElementById("password");
 let form = document.querySelector(".signup__form");
 
-const createUser = (email, password) => {
-  let user = {
-    email,
-    password,
-    amount: 200,
-  };
-  localStorage.setItem(email, JSON.stringify(user));
-};
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let email = inputEmail.value;
@@ -30,6 +22,6 @@ form.addEventListener("submit", (e) => {
   if (emailRegex.test(email) && !findUser(email) && password.length >= 6) {
     form.reset();
     createUser(email, password);
-    logIn();
+    logIn(email);
   }
 });
