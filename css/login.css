@@ -123,6 +123,9 @@
 }
 
 @media (max-width: 600px) {
+  .login__container {
+    height: 90vh;
+  }
   .login__div-IMG {
     display: none;
   }

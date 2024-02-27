@@ -97,6 +97,9 @@
 }
 
 @media (max-width: 600px) {
+  .landing_page {
+    height: 90vh;
+  }
   .toggle_layer-show {
     position: fixed;
     display: block;
