@@ -12,5 +12,5 @@ logout__button.addEventListener("click", logOut);
 const divEmail = document.querySelector(".div__email");
 const divAmount = document.querySelector(".div__amount");
 
-divEmail.innerHTML = "USUARIO: " + user.email;
-divAmount.innerHTML = "SALDO: " + user.amount;
+divEmail.innerHTML = `USUARIO: <span>${user.email}</span>`;
+divAmount.innerHTML = `SALDO DISPONIBLE: <span>${user.amount}bs</span>`;

@@ -13,7 +13,90 @@
     <h1>SMS</h1>
     <h5>FORMULARIO</h5>
     <a href="./comprobante.html">COMPROBANTE PAGO</a>
-    <a href="./private.html">VOLVER A PRIVATE</a>
+    <!-- formulario -->
+    <a class="backLink" href="../index.html">
+      <i class="fa-solid fa-arrow-left backArrow"></i>
+    </a>
+    <div class="sms">
+      <h1>Realizar Pago</h1>
+      <form class="sms__form">
+        <fieldset class="sms__fieldset">
+          <label for="bank" class="sms__label">Banco del Destinatario</label>
+          <select name="bank" id="bank" class="sms__input">
+            <option disabled selected>Seleccione una opción</option>
+            <option value="BBVA Provincial">Banco Provincial</option>
+            <option value="Bancamiga">Bancamiga</option>
+            <option value="Bancaribe">Bancaribe</option>
+            <option value="Banco de Venezuela">Banco de Venezuela</option>
+            <option value="Banesco">Banesco</option>
+            <option value="Banco Caroní">Banco Caroní</option>
+            <option value="Banco del Tesoro">Banco del Tesoro</option>
+            <option value="Banco Exterior">Banco Exterior</option>
+            <option value="Banco Mercantil">Banco Mercantil</option>
+            <option value="Banplus">Banplus</option>
+            <option value="Banco Bicentenario del Pueblo">
+              Banco Bicentenario del Pueblo
+            </option>
+            <option value="Banco Fondo Común">Banco Fondo Común</option>
+            <option value="100%Banco">100% Banco</option>
+            <option value="Banco Activo">Banco Activo</option>
+            <option value="Banco Agrícola de Venezuela">
+              Banco Agrícola de Venezuela
+            </option>
+            <option value="Banco Nacional de Crédito">
+              Banco Nacional de Crédito
+            </option>
+            <option value="Banco Plaza">Banco Plaza</option>
+            <option value="Banco Sofitasa">Banco Sofitasa</option>
+            <option value="Banco Venezolano de Crédito">
+              Banco Venezolano de Crédito
+            </option>
+            <option value="Bancrecer">Bancrecer</option>
+            <option value="BANFANB">BANFANB</option>
+            <option value="Bangente">Bangente</option>
+            <option value="Del Sur">Del Sur</option>
+            <option value="Mi Banco">Mi Banco</option>
+          </select>
+        </fieldset>
+        <fieldset class="sms__fieldset">
+          <label for="tel" class="sms__label">Teléfono del Destinatario</label>
+          <input
+            type="tel"
+            required
+            autocomplete="tel"
+            id="tel"
+            class="sms__input"
+            placeholder="Teléfono"
+          />
+        </fieldset>
+        <fieldset class="sms__fieldset">
+          <label for="cedula" class="sms__label">Cédula del Destinatario</label>
+          <input
+            type="text"
+            required
+            autocomplete="text"
+            id="cedula"
+            class="sms__input"
+            placeholder="Cédula"
+          />
+        </fieldset>
+        <fieldset class="sms__fieldset">
+          <label for="amount" class="sms__label">Monto</label>
+          <input
+            type="number"
+            required
+            min="1"
+            max="50000"
+            autocomplete="transaction-amount"
+            id="amount"
+            class="sms__input"
+            placeholder="Monto"
+          />
+        </fieldset>
+        <hr />
+        <button class="sms__button" type="submit">Confirmar</button>
+      </form>
+    </div>
   </body>
   <script
     src="https://kit.fontawesome.com/11d538bce9.js"

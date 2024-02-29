@@ -66,8 +66,7 @@
   color: #00f2ff;
 }
 
-.login_button,
-.signup_button {
+.navbar_button {
   min-width: 5rem;
   padding: 0.8rem;
   border-radius: 5rem;
@@ -76,8 +75,7 @@
   transition: background-image 5s ease;
 }
 
-.login_button:hover,
-.signup_button:hover {
+.navbar_button:hover {
   background-image: linear-gradient(to right, #ffffff, #00f2ff);
   box-shadow: 0px 0px 20px 1px #00f2ff;
   cursor: pointer;
@@ -120,7 +118,7 @@
     transition: background-color 300ms ease;
   }
   .toggle_button:hover {
-    background-color: rgba(100, 100, 100, 0.6);
+    background-color: rgba(100, 100, 100, 0.7);
   }
   .bars {
     color: white;
