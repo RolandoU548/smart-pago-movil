@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.qrIMG {
+  max-width: 85%;
+}
+
+.message {
+  display: flex;
+}
+
+.message::after {
+  content: "...";
+  width: 1ch;
+  overflow: hidden;
+  animation: 2s typing steps(4) infinite;
+  font-family: "Courier New";
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 4ch;
+  }
+}

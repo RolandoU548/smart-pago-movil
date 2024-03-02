@@ -61,9 +61,14 @@ export const getActualUser = () => {
 };
 
 export const logOut = () => {
-  localStorage.setItem("logged", "false");
-  localStorage.setItem("loggedFirstTime", "false");
+  localStorage.removeItem("logged");
+  localStorage.removeItem("loggedFirstTime");
   localStorage.setItem("loggedOut", "true");
-  localStorage.setItem("actualUser", false);
+  localStorage.removeItem("actualUser");
+  localStorage.removeItem("payment");
   window.location.href = "../index.html";
+};
+
+export const getActualDate = () => {
+  console.log("juan");
 };

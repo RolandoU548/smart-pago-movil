@@ -2,7 +2,7 @@ import { showToast } from "./utils.js";
 
 if (localStorage.getItem("loggedOut") == "true") {
   showToast("Sesión Cerrada", "check");
-  localStorage.setItem("loggedOut", "false");
+  localStorage.removeItem("loggedOut");
 }
 
 let landing_page_header = document.querySelector(".landing_page_header");
