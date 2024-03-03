@@ -5,10 +5,10 @@ if (localStorage.getItem("loggedOut") == "true") {
   localStorage.removeItem("loggedOut");
 }
 
-let landing_page_header = document.querySelector(".landing_page_header");
-let toggle_button_navbar = document.querySelector(".toggle_button_navbar");
-let toggle_button = document.querySelector(".toggle_button");
-let toggle_layer = document.querySelector(".toggle_layer");
+const landing_page_header = document.querySelector(".landing_page_header");
+const toggle_button_navbar = document.querySelector(".toggle_button_navbar");
+const toggle_button = document.querySelector(".toggle_button");
+const toggle_layer = document.querySelector(".toggle_layer");
 
 const toggleNavbar = () => {
   landing_page_header.classList.toggle("landing_page_header-show");

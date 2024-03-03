@@ -1,7 +1,7 @@
 export const showToast = (texto, iconP = "") => {
-  let toast = document.createElement("div");
+  const toast = document.createElement("div");
   toast.classList.add("toast");
-  let icon = "";
+  const icon = "";
   if (iconP == "check") {
     icon = '<i class="fa-solid fa-circle-check"></i>';
     toast.classList.add("check");
@@ -13,9 +13,9 @@ export const showToast = (texto, iconP = "") => {
     toast.classList.add("warn");
   }
   toast.innerHTML = icon + " " + texto;
-  let toastBox = document.querySelector("#toastBox");
+  const toastBox = document.querySelector("#toastBox");
   if (!toastBox) {
-    let body = document.getElementsByTagName("body")[0];
+    const body = document.getElementsByTagName("body")[0];
     toastBox = document.createElement("div");
     toastBox.id = "toastBox";
     body.appendChild(toastBox);
@@ -27,9 +27,12 @@ export const showToast = (texto, iconP = "") => {
 };
 
 export const findUser = (email) => {
+  let key;
   for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    if (key == email) return JSON.parse(localStorage.getItem(key));
+    key = localStorage.key(i);
+    if (key == email) {
+      return JSON.parse(localStorage.getItem(key));
+    }
   }
   return false;
 };
@@ -41,7 +44,7 @@ export const checkLogIn = () => {
 };
 
 export const createUser = (email, password, amount = 500) => {
-  let user = {
+  const user = {
     email,
     password,
     amount,

@@ -10,7 +10,7 @@ import {
 checkLogIn();
 getHeaderData();
 
-let back__button = document.querySelector(".back__button");
+const back__button = document.querySelector(".back__button");
 back__button.addEventListener("click", () => {
   window.location.href = "./app.html";
 });
@@ -20,11 +20,13 @@ const inputBank = document.querySelector("#bank");
 const inputs = manualForm.querySelectorAll("input");
 
 manualForm.addEventListener("submit", (e) => {
-  console.log(inputBank.value);
   e.preventDefault();
   if (inputBank.value == "Seleccione una opción") {
     showToast("Seleccione Banco", "error");
     return false;
+  }
+  if (inputs[0].value) {
+    console.log("hola");
   }
   const payment = {
     code: generateOperationCode(),

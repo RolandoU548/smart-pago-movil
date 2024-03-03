@@ -6,7 +6,7 @@ if (localStorage.getItem("loggedFirstTime") == "true") {
   localStorage.setItem("loggedFirstTime", "false");
 }
 
-let logout__button = document.querySelector(".logout__button");
+const logout__button = document.querySelector(".logout__button");
 logout__button.addEventListener("click", logOut);
 getHeaderData();
 
