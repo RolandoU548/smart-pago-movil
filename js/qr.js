@@ -41,13 +41,18 @@ const phone =
 const date = getActualDate();
 const hour = getActualHour();
 const code = generateOperationCode();
+const paymentReason = "Pago por QR";
+const amount = 300;
+
 const payment = {
-  bank,
-  cedula,
-  phone,
-  hour,
   code,
   date,
+  hour,
+  cedula,
+  bank,
+  phone,
+  amount,
+  paymentReason,
 };
 
 localStorage.setItem("payment", JSON.stringify(payment));

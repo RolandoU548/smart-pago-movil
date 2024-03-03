@@ -48,7 +48,7 @@ hr {
   content: "...";
   width: 1ch;
   overflow: hidden;
-  animation: 2s typing steps(4) infinite;
+  animation: 2300ms typing steps(4) infinite;
   font-family: "Courier New";
 }
 

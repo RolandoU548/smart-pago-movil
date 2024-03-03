@@ -22,8 +22,8 @@
 }
 
 .logout__button:hover {
-  background-color: rgba(100, 75, 153, 0.3);
-  box-shadow: 0 0 10px rgb(200, 200, 200);
+  background-color: rgba(100, 75, 153, 0.35);
+  box-shadow: 0 0 15px rgb(200, 200, 200);
 }
 
 .div__email,
