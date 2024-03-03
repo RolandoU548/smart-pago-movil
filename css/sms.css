@@ -1,3 +1,8 @@
+.table__contact{
+  width: 100px;
+}
+
+
 .sms {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4),
     0 8px 10px -6px rgb(0 0 0 / 0.4);
