@@ -88,10 +88,11 @@
 .option:hover {
   scale: 1.05;
   box-shadow: 0px 0px 5px white;
-  background-color: rgba(100, 100, 100, 0.1);
+  background-color: rgba(150, 150, 150, 0.1);
 }
 
-.qr-svg {
+.qr-svg,
+.phone-svg {
   width: 200px;
   height: 200px;
   max-width: 90%;
