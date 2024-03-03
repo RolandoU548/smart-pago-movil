@@ -52,6 +52,6 @@ const payment = {
 
 localStorage.setItem("payment", JSON.stringify(payment));
 
-// setTimeout(() => {
-//   window.location.href = "./comprobante.html";
-// }, 4000);
+setTimeout(() => {
+  window.location.href = "./comprobante.html";
+}, 4000);
