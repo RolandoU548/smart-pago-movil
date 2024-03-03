@@ -1,5 +1,6 @@
 .app__header {
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   padding: 10px 1vw;
@@ -41,6 +42,41 @@
   flex-direction: column;
   gap: 0.4rem;
   padding: 5px 0px;
+}
+
+.app__container {
+  height: 90vh;
+}
+
+.options__container {
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.options {
+  border: 3px double white;
+  display: flex;
+  max-width: 80%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  border-width: 10px;
+  transition: scale 300ms;
+  font-weight: bolder;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.options:hover {
+  scale: 1.05;
+  box-shadow: 0px 0px 5px white;
 }
 
 @media (max-width: 600px) {
