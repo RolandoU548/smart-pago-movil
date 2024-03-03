@@ -1,7 +1,7 @@
 import { getHeaderData, showNewAmount } from "./utils.js";
 
 getHeaderData();
-let back__button = document.querySelector(".back__button");
+const back__button = document.querySelector(".back__button");
 back__button.addEventListener("click", () => {
   window.location.href = "./app.html";
 });
