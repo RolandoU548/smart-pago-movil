@@ -152,3 +152,7 @@ export const getHeaderData = () => {
   spanEmail.innerHTML = user.email;
   spanAmount.innerHTML = `${user.amount}bs`;
 };
+
+export const showNewAmount = () => {
+  showToast(`Saldo Restante: ${getActualUser().amount}bs`, "check");
+};

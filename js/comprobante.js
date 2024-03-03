@@ -1,4 +1,4 @@
-import { getHeaderData } from "./utils.js";
+import { getHeaderData, showNewAmount } from "./utils.js";
 
 getHeaderData();
 let back__button = document.querySelector(".back__button");
@@ -33,3 +33,5 @@ amountValue.innerHTML = amount + "bs";
 
 const paymentReasonValue = document.querySelector("#paymentReason");
 paymentReasonValue.innerHTML = paymentReason;
+
+showNewAmount();
