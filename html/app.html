@@ -10,13 +10,7 @@
   </head>
   <link />
   <body class="body-blue">
-    <h1>APP</h1>
-    <h5>FORMULARIO</h5>
-    <h5>ESCOGER QR O DATOS MANUAL</h5>
-    <a href="./comprobante.html">COMPROBANTE PAGO</a>
-    <a href="./private.html">VOLVER A PRIVATE</a>
-    <!-- formulario -->
-    <a class="backLink" href="../index.html">
+    <a class="backLink" href="./private.html">
       <i class="fa-solid fa-arrow-left backArrow"></i>
     </a>
     <div class="app">
@@ -24,7 +18,7 @@
       <form class="app__form">
         <fieldset class="app__fieldset">
           <label for="bank" class="app__label">Banco del Destinatario</label>
-          <select name="bank" id="bank" class="app__input">
+          <select name="bank" id="bank" class="app__input" required>
             <option disabled selected>Seleccione una opción</option>
             <option value="BBVA Provincial">Banco Provincial</option>
             <option value="Bancamiga">Bancamiga</option>
@@ -88,7 +82,7 @@
             type="number"
             required
             min="1"
-            max="50000"
+            max="1000000"
             autocomplete="transaction-amount"
             id="amount"
             class="app__input"

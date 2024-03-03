@@ -13,7 +13,7 @@ hr {
   width: 100%;
   position: absolute;
   top: 0;
-  animation: move 4200ms ease-out infinite;
+  animation: move 4400ms ease-out infinite;
 }
 
 @keyframes move {
@@ -61,6 +61,16 @@ hr {
   }
 }
 
+.backLink {
+  display: block;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+.backArrow {
+  font-size: 1.2rem;
+}
 @media (max-width: 600px) {
   .message {
     font-size: 1.5rem;

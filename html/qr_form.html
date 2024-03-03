@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMART PAGO MOVIL</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/qr_form.css" />
+    <link rel="icon" href="../assets/smartphone.ico" type="image/x-icon" />
+  </head>
+  <link />
+  <body class="body-blue">
+    <a class="backLink" href="./private.html">
+      <i class="fa-solid fa-arrow-left backArrow"></i>
+    </a>
+    <div class="container">
+      <div class="qr">
+        <h1>Especifique Monto</h1>
+        <form class="qr__form">
+          <fieldset class="qr__fieldset">
+            <label for="amount" class="qr__label">Monto</label>
+            <input
+              type="number"
+              required
+              min="1"
+              max="1000000"
+              autocomplete="transaction-amount"
+              id="amount"
+              class="qr__input"
+              placeholder="Monto"
+            />
+          </fieldset>
+          <fieldset class="qr__fieldset">
+            <label for="paymentReason" class="qr__label">Motivo del Pago</label>
+            <input
+              type="text"
+              required
+              autocomplete="paymentReason"
+              id="paymentReason"
+              class="qr__input"
+              placeholder="Motivo del Pago"
+            />
+          </fieldset>
+          <hr />
+          <button class="qr__button" type="submit">Confirmar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/11d538bce9.js"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" src="../js/qr_form.js"></script>
+</html>
