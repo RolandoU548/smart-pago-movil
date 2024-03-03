@@ -1,7 +1,7 @@
 export const showToast = (texto, iconP = "") => {
   const toast = document.createElement("div");
   toast.classList.add("toast");
-  const icon = "";
+  let icon = "";
   if (iconP == "check") {
     icon = '<i class="fa-solid fa-circle-check"></i>';
     toast.classList.add("check");
@@ -13,7 +13,7 @@ export const showToast = (texto, iconP = "") => {
     toast.classList.add("warn");
   }
   toast.innerHTML = icon + " " + texto;
-  const toastBox = document.querySelector("#toastBox");
+  let toastBox = document.querySelector("#toastBox");
   if (!toastBox) {
     const body = document.getElementsByTagName("body")[0];
     toastBox = document.createElement("div");
@@ -125,7 +125,7 @@ export const generateRandomBank = () => {
 };
 
 export const generateRandomCedula = () => {
-  return Math.floor(Math.random() * 31999999) + 1;
+  return Math.floor(Math.random() * 32000000) + 1;
 };
 
 export const generateRandomNumber = () => {
@@ -138,7 +138,7 @@ export const generateRandomNumber = () => {
 export const makePayment = (payment) => {
   const user = getActualUser();
   if (payment.amount > user.amount) {
-    showToast("Monto Inválido", "error");
+    showToast("Saldo Insuficiente", "error");
     return false;
   }
   localStorage.setItem("payment", JSON.stringify(payment));
