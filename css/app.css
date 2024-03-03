@@ -48,8 +48,19 @@
   height: 90vh;
 }
 
-.options__container {
+.app__options {
   height: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.options__title {
+  margin-top: 3rem;
+}
+
+.options__container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -57,13 +68,12 @@
   gap: 20px;
 }
 
-.options {
+.option {
   border: 3px double white;
   display: flex;
   max-width: 80%;
   justify-content: center;
   align-items: center;
-  text-align: center;
   width: 250px;
   height: 200px;
   border-radius: 20px;
@@ -74,12 +84,19 @@
   cursor: pointer;
 }
 
-.options:hover {
+.option:hover {
   scale: 1.05;
   box-shadow: 0px 0px 5px white;
+  background-color: rgba(100, 100, 100, 0.1);
 }
 
 @media (max-width: 600px) {
+  .options__title {
+    font-size: 1.5rem;
+  }
+  .option {
+    font-size: 2rem;
+  }
   .logout__button {
     box-shadow: 0 0 4px rgb(200, 200, 200);
     font-size: 0.8rem;

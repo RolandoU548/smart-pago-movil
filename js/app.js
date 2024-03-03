@@ -15,11 +15,10 @@ const divAmount = document.querySelector(".div__amount");
 divEmail.innerHTML = `USUARIO: <span>${user.email}</span>`;
 divAmount.innerHTML = `SALDO DISPONIBLE: <span>${user.amount}bs</span>`;
 
-const options = document.querySelectorAll(".options");
+const options = document.querySelectorAll(".option");
 options[0].addEventListener("click", () => {
   window.location.href = "./manual.html";
 });
 options[1].addEventListener("click", () => {
   window.location.href = "./qr.html";
 });
-console.log(options);
