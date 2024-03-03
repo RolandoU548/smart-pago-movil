@@ -8,11 +8,11 @@ import {
 } from "./utils.js";
 checkLogIn();
 
-const appForm = document.querySelector(".app__form");
+const manualForm = document.querySelector(".manual__form");
 const inputBank = document.querySelector("#bank");
-const inputs = appForm.querySelectorAll("input");
+const inputs = manualForm.querySelectorAll("input");
 
-appForm.addEventListener("submit", (e) => {
+manualForm.addEventListener("submit", (e) => {
   console.log(inputBank.value);
   e.preventDefault();
   if (inputBank.value == "Seleccione una opción") {

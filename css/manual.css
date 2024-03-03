@@ -1,4 +1,4 @@
-.app {
+.manual {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4),
     0 8px 10px -6px rgb(0 0 0 / 0.4);
   height: 90%;
@@ -14,28 +14,28 @@
   justify-content: space-between;
 }
 
-.app__form {
+.manual__form {
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.app__input,
-.app__label,
-.app__button {
+.manual__input,
+.manual__label,
+.manual__button {
   display: block;
   width: 100%;
 }
 
-.app__input {
+.manual__input {
   border-radius: 5px;
   border: none;
   padding: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.app__button {
+.manual__button {
   background-color: #2563eb;
   border: none;
   padding: 0.5rem;
@@ -46,15 +46,15 @@
   transition: background-color 300ms ease;
 }
 
-.app__button:focus {
+.manual__button:focus {
   box-shadow: 0 0 0 3px #000, 0 0 0 4px #fff;
 }
 
-.app__button:hover {
+.manual__button:hover {
   background-color: #1553db;
 }
 
-.app__fieldset {
+.manual__fieldset {
   border: none;
 }
 

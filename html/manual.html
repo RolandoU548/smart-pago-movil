@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SMART PAGO MOVIL</title>
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/manual.css" />
     <link rel="icon" href="../assets/smartphone.ico" type="image/x-icon" />
   </head>
   <link />
@@ -13,12 +13,12 @@
     <a class="backLink" href="./private.html">
       <i class="fa-solid fa-arrow-left backArrow"></i>
     </a>
-    <div class="app">
+    <div class="manual">
       <h1>Realizar Pago</h1>
-      <form class="app__form">
-        <fieldset class="app__fieldset">
-          <label for="bank" class="app__label">Banco del Destinatario</label>
-          <select name="bank" id="bank" class="app__input" required>
+      <form class="manual__form">
+        <fieldset class="manual__fieldset">
+          <label for="bank" class="manual__label">Banco del Destinatario</label>
+          <select name="bank" id="bank" class="manual__input" required>
             <option disabled selected>Seleccione una opción</option>
             <option value="BBVA Provincial">Banco Provincial</option>
             <option value="Bancamiga">Bancamiga</option>
@@ -54,30 +54,34 @@
             <option value="Mi Banco">Mi Banco</option>
           </select>
         </fieldset>
-        <fieldset class="app__fieldset">
-          <label for="tel" class="app__label">Teléfono del Destinatario</label>
+        <fieldset class="manual__fieldset">
+          <label for="tel" class="manual__label"
+            >Teléfono del Destinatario</label
+          >
           <input
             type="tel"
             required
             autocomplete="tel"
             id="tel"
-            class="app__input"
+            class="manual__input"
             placeholder="Teléfono"
           />
         </fieldset>
-        <fieldset class="app__fieldset">
-          <label for="cedula" class="app__label">Cédula del Destinatario</label>
+        <fieldset class="manual__fieldset">
+          <label for="cedula" class="manual__label"
+            >Cédula del Destinatario</label
+          >
           <input
             type="text"
             required
             autocomplete="text"
             id="cedula"
-            class="app__input"
+            class="manual__input"
             placeholder="Cédula"
           />
         </fieldset>
-        <fieldset class="app__fieldset">
-          <label for="amount" class="app__label">Monto</label>
+        <fieldset class="manual__fieldset">
+          <label for="amount" class="manual__label">Monto</label>
           <input
             type="number"
             required
@@ -85,23 +89,25 @@
             max="1000000"
             autocomplete="transaction-amount"
             id="amount"
-            class="app__input"
+            class="manual__input"
             placeholder="Monto"
           />
         </fieldset>
-        <fieldset class="app__fieldset">
-          <label for="paymentReason" class="app__label">Motivo del Pago</label>
+        <fieldset class="manual__fieldset">
+          <label for="paymentReason" class="manual__label"
+            >Motivo del Pago</label
+          >
           <input
             type="text"
             required
             autocomplete="paymentReason"
             id="paymentReason"
-            class="app__input"
+            class="manual__input"
             placeholder="Motivo del Pago"
           />
         </fieldset>
         <hr />
-        <button class="app__button" type="submit">Confirmar</button>
+        <button class="manual__button" type="submit">Confirmar</button>
       </form>
     </div>
   </body>
@@ -109,5 +115,5 @@
     src="https://kit.fontawesome.com/11d538bce9.js"
     crossorigin="anonymous"
   ></script>
-  <script type="module" src="../js/app.js"></script>
+  <script type="module" src="../js/manual.js"></script>
 </html>
