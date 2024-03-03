@@ -40,11 +40,11 @@ export const checkLogIn = () => {
   }
 };
 
-export const createUser = (email, password) => {
+export const createUser = (email, password, amount = 500) => {
   let user = {
     email,
     password,
-    amount: 500,
+    amount,
   };
   localStorage.setItem(email, JSON.stringify(user));
 };
@@ -130,4 +130,16 @@ export const generateRandomNumber = () => {
   return `${numbers[Math.floor(Math.random() * numbers.length)]}-${
     Math.floor(Math.random() * 9000000) + 1000000
   }`;
+};
+
+export const makePayment = (payment) => {
+  const user = getActualUser();
+  if (payment.amount > user.amount) {
+    showToast("Monto Inválido", "error");
+    return false;
+  }
+  localStorage.setItem("payment", JSON.stringify(payment));
+  createUser(user.email, user.password, user.amount - payment.amount);
+  window.location.href = "./comprobante.html";
+  return true;
 };

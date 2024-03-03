@@ -6,6 +6,7 @@ import {
   generateRandomBank,
   generateRandomCedula,
   generateRandomNumber,
+  makePayment,
 } from "./utils.js";
 
 checkLogIn();
@@ -34,6 +35,5 @@ qrForm.addEventListener("submit", (e) => {
     amount,
     paymentReason,
   };
-  localStorage.setItem("payment", JSON.stringify(payment));
-  window.location.href = "./comprobante.html";
+  makePayment(payment);
 });

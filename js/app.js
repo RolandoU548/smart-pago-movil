@@ -4,6 +4,7 @@ import {
   generateOperationCode,
   getActualDate,
   getActualHour,
+  makePayment,
 } from "./utils.js";
 checkLogIn();
 
@@ -28,6 +29,5 @@ appForm.addEventListener("submit", (e) => {
     amount: inputs[2].value,
     paymentReason: inputs[3].value,
   };
-  localStorage.setItem("payment", JSON.stringify(payment));
-  window.location.href = "./comprobante.html";
+  makePayment(payment);
 });

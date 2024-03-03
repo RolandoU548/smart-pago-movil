@@ -2,7 +2,8 @@ body {
   display: flex;
   min-height: 90vh;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -13,7 +14,7 @@ hr {
   width: 100%;
   position: absolute;
   top: 0;
-  animation: move 4400ms ease-out infinite;
+  animation: move 4200ms ease-out infinite;
 }
 
 @keyframes move {
