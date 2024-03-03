@@ -7,22 +7,35 @@
 }
 
 .table__box{
+  border: 1px double #1681da;
   margin: auto;
   width: 500px;
-}
-
-.text__box{
-  border: 3px double #1681da;
-  display: flex;
-  align-items: center;
   max-width: 80%;
   height: 100px;
 }
 
+.text__box{
+  border: 1px double #1681da;
+  display: flex;
+  align-items: center;
+}
+
 .text__box_stuff{
-  border: 3px double #1681da;
   display: flex;
   align-items: center;
   max-width: 80%;
   height: 600px;
+}
+
+.text__context{
+  text-align: center;
+  text-shadow: 2px 2px 5px #0c1c66;
+  margin-left: 5px;
+}
+
+.text__contact{
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 2px 2px 5px #0c1c66;
+  margin-left: 30px;
 }

@@ -1,3 +1,29 @@
 .table__contact{
     width: 100px;
 }
+
+.chat__sms{
+    border: 1px double #1681da;
+    margin: auto;
+    width: 500px;
+    max-width: 80%;
+    height: 100px;
+}
+
+.chat__box{
+    border: 1px double #1681da;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.msg__box{
+    display: flex;
+    align-items: center;
+    height: 675px;
+}
+
+.msg__context{
+    line-height: 3;
+    font-size: 16px;
+}
