@@ -53,7 +53,7 @@ export const logIn = (email) => {
   localStorage.setItem("logged", "true");
   localStorage.setItem("loggedFirstTime", "true");
   localStorage.setItem("actualUser", email);
-  window.location.href = "./private.html";
+  window.location.href = "./app.html";
 };
 
 export const getActualUser = () => {
