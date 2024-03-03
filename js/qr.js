@@ -1,3 +1,9 @@
+import {
+  generateOperationCode,
+  getActualDate,
+  getActualHour,
+} from "./utils.js";
+
 const banks = [
   "BBVA Provincial",
   "Bancamiga",
@@ -32,20 +38,9 @@ const phone =
   numbers[Math.floor(Math.random() * numbers.length)] +
   "-" +
   (Math.floor(Math.random() * 9000000) + 1000000);
-const today = new Date(Date.now());
-const date = `${today.getDate()}/${
-  today.getMonth() + 1
-}/${today.getFullYear()}`;
-let hours = today.getHours();
-const ampm = hours >= 12 ? "PM" : "AM";
-hours = hours > 12 ? hours - 12 : hours;
-hours = hours == 0 ? 12 : hours;
-const hour = `${hours}:${String(today.getMinutes()).padStart(2, "0")}${ampm}`;
-let code = "0";
-for (let i = 1; i < 12; i++) {
-  code += String(Math.floor(Math.random() * 8) + 1);
-}
-
+const date = getActualDate();
+const hour = getActualHour();
+const code = generateOperationCode();
 const payment = {
   bank,
   cedula,
@@ -57,6 +52,6 @@ const payment = {
 
 localStorage.setItem("payment", JSON.stringify(payment));
 
-setTimeout(() => {
-  window.location.href = "./comprobante.html";
-}, 4000);
+// setTimeout(() => {
+//   window.location.href = "./comprobante.html";
+// }, 4000);

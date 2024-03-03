@@ -44,7 +44,7 @@ export const createUser = (email, password) => {
   let user = {
     email,
     password,
-    amount: 200,
+    amount: 500,
   };
   localStorage.setItem(email, JSON.stringify(user));
 };
@@ -70,5 +70,23 @@ export const logOut = () => {
 };
 
 export const getActualDate = () => {
-  console.log("juan");
+  const today = new Date(Date.now());
+  return `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+};
+
+export const getActualHour = () => {
+  const today = new Date(Date.now());
+  let hours = today.getHours();
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours > 12 ? hours - 12 : hours;
+  hours = hours == 0 ? 12 : hours;
+  return `${hours}:${String(today.getMinutes()).padStart(2, "0")}${ampm}`;
+};
+
+export const generateOperationCode = () => {
+  let code = "0";
+  for (let i = 1; i < 12; i++) {
+    code += String(Math.floor(Math.random() * 8) + 1);
+  }
+  return code;
 };

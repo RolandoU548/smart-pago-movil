@@ -6,8 +6,38 @@ body {
   align-items: center;
 }
 
+hr {
+  background-color: red;
+  z-index: 10;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  animation: move 4200ms ease-out infinite;
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: calc(100% - 10px);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.qrDiv {
+  position: relative;
+  max-width: 90%;
+}
+
 .qrIMG {
-  max-width: 85%;
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  width: 300px;
+  height: auto;
 }
 
 .message {
@@ -28,5 +58,11 @@ body {
   }
   to {
     width: 4ch;
+  }
+}
+
+@media (max-width: 600px) {
+  .message {
+    font-size: 1.5rem;
   }
 }
