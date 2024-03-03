@@ -1,3 +1,11 @@
+import { getHeaderData } from "./utils.js";
+
+getHeaderData();
+let back__button = document.querySelector(".back__button");
+back__button.addEventListener("click", () => {
+  window.location.href = "./app.html";
+});
+
 const payment = JSON.parse(localStorage.getItem("payment"));
 const { code, date, hour, cedula, bank, phone, amount, paymentReason } =
   payment;

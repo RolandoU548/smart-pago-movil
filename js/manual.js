@@ -5,8 +5,15 @@ import {
   getActualDate,
   getActualHour,
   makePayment,
+  getHeaderData,
 } from "./utils.js";
 checkLogIn();
+getHeaderData();
+
+let back__button = document.querySelector(".back__button");
+back__button.addEventListener("click", () => {
+  window.location.href = "./app.html";
+});
 
 const manualForm = document.querySelector(".manual__form");
 const inputBank = document.querySelector("#bank");

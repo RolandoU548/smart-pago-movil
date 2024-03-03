@@ -7,9 +7,15 @@ import {
   generateRandomCedula,
   generateRandomNumber,
   makePayment,
+  getHeaderData,
 } from "./utils.js";
 
 checkLogIn();
+getHeaderData();
+let back__button = document.querySelector(".back__button");
+back__button.addEventListener("click", () => {
+  window.location.href = "./app.html";
+});
 
 const bank = generateRandomBank();
 const cedula = generateRandomCedula();

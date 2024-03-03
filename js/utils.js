@@ -143,3 +143,12 @@ export const makePayment = (payment) => {
   window.location.href = "./comprobante.html";
   return true;
 };
+
+export const getHeaderData = () => {
+  const user = getActualUser();
+  const spanEmail = document.querySelector(".span__email");
+  const spanAmount = document.querySelector(".span__amount");
+
+  spanEmail.innerHTML = user.email;
+  spanAmount.innerHTML = `${user.amount}bs`;
+};
