@@ -63,6 +63,7 @@
   border: none;
   border-radius: 20px;
   padding: 10px;
+  padding-right: 85px;
   outline: none;
   color: white;
   display: block;
@@ -81,35 +82,6 @@
   gap: 0.5rem;
   top: 0.4rem;
   right: 0.4rem;
-}
-
-@media (max-width: 600px) {
-  .logo {
-    width: 20px;
-  }
-  .chat__info {
-    font-size: 0.7rem;
-  }
-  .info {
-    font-size: 0.5rem;
-    padding: 5px;
-  }
-  .plus__container {
-    width: 14px;
-    height: 14px;
-    font-size: 0.6rem;
-  }
-  .keyboard__container {
-    font-size: 0.8rem;
-  }
-  .keyboard {
-    padding: 5px;
-    font-size: 0.7rem;
-  }
-  .icons {
-    top: 0.4rem;
-    right: 0.5rem;
-  }
 }
 
 @media (max-width: 425px) {
@@ -147,6 +119,7 @@
   }
   .keyboard {
     padding: 10px;
+    padding-right: 85px;
     font-size: 0.8rem;
   }
   .plus__container {
