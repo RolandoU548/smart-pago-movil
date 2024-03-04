@@ -13,6 +13,18 @@ const { code, date, hour, cedula, bank, phone, amount, paymentReason } =
 const codeValue = document.querySelector("#operation-code");
 codeValue.innerHTML = code;
 
+const copyButton = document.createElement("button");
+copyButton.innerHTML = "<i class='fa-regular fa-clipboard'></i>";
+copyButton.style.background = "transparent";
+copyButton.style.border = "none";
+copyButton.style.color = "white";
+copyButton.style.cursor = "pointer";
+copyButton.addEventListener("click", () => {
+  navigator.clipboard.writeText(code);
+  copyButton.innerHTML = "<i class='fa-solid fa-check'></i>";
+});
+codeValue.appendChild(copyButton);
+
 const dateValue = document.querySelector("#date");
 dateValue.innerHTML = date;
 
