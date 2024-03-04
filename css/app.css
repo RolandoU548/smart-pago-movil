@@ -122,4 +122,7 @@
     gap: 1rem;
     padding: 5px 10px;
   }
+  .options__container {
+    padding-bottom: 1rem;
+  }
 }
