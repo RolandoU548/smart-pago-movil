@@ -37,7 +37,7 @@ manualForm.addEventListener("submit", (e) => {
   if (
     !cedulaRegex.test(inputs[1].value) ||
     inputs[1].value < 1 ||
-    inputs[1].value > 32000000
+    inputs[1].value > 33000000
   ) {
     showToast("Cédula Inválida", "error");
     return false;
