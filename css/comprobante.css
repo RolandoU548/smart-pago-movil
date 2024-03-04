@@ -80,7 +80,7 @@
 }
 
 #amount {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
   margin: 1rem auto;
   border-radius: 10px;
   padding: 1rem;
@@ -108,6 +108,16 @@
   background-color: rgb(4, 83, 255);
 }
 
+.back__div {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  width: 900px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media (max-width: 600px) {
   .comprobante {
     font-size: 10px;
@@ -117,5 +127,12 @@
   }
   .logo {
     display: none;
+  }
+  .back__div {
+    font-size: 0.6rem;
+  }
+  .app__header,
+  .back__button {
+    font-size: 0.8rem;
   }
 }

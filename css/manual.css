@@ -108,3 +108,10 @@
 hr {
   margin: 0.5rem 0;
 }
+
+@media (max-width: 600px) {
+  .app__header,
+  .back__button {
+    font-size: 0.8rem;
+  }
+}
