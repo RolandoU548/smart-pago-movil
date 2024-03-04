@@ -61,6 +61,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  font-style: italic;
 }
 
 .comprobante div {
@@ -96,7 +97,7 @@
   object-fit: cover;
 }
 
-.check {
+.checkI {
   width: 40px;
   height: auto;
   margin: auto;
