@@ -76,6 +76,8 @@
 .icons {
   position: absolute;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   top: 0.6rem;
   right: 0.6rem;
@@ -187,4 +189,18 @@
 .message.outcoming {
   background-color: blue;
   align-self: flex-end;
+}
+
+.submit {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
 }

@@ -26,6 +26,9 @@ const receiveMessage = (message) => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
+  if (keyboard.value == "") {
+    return false;
+  }
   sendMessage(keyboard.value);
   receiveMessage("OK");
   keyboardForm.reset();
