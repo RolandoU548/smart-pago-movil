@@ -13,29 +13,43 @@
       <h2>SMS</h2>
       <button onclick="window.location.href='sms.html'">Regresar</button>
     </header>
-    <table class="chat__sms">
-      <tr class="chat__box">
-        <td>
-          <img
-            src="../assets//logo.png"
-            type="image/x-icon"
-            class="table__contact"
-          />
-          <h3>Smart Pago Movil</h3>
-        </td>
-      </tr>
-      <tr class="msg__box">
-        <td>
-          <div class="msg__context">
-            <h4><b>SMS: </b>Introduce: Código - Número - Cedula - Monto</h4>
+    <div class="chat__container">
+      <div class="chat__info">
+        <i class="fa-solid fa-arrow-left icon"></i>
+        <img
+          src="../assets/logoBackground.png"
+          type="image/x-icon"
+          class="logo"
+        />
+        <h3>Smart Pago Móvil</h3>
+        <i class="fa-solid fa-video icon"></i>
+        <i class="fa-solid fa-phone icon"></i>
+        <i class="fa-solid fa-ellipsis-vertical icon"></i>
+      </div>
+      <div class="chat"></div>
+      <div class="message">
+        Mensajes de texto con Smart Pago Móvil (SMS/MMS)
+      </div>
+      <div class="keyboard__container">
+        <div class="plus__container">
+          <i class="fa-solid fa-plus icon"></i>
+        </div>
+        <div>
+          <i class="fa-regular fa-images icon"></i>
+        </div>
+        <form class="keyboard__form">
+          <input class="keyboard" type="text" placeholder="Mensaje de texto" />
+          <div class="icons">
+            <i class="fa-regular fa-face-smile icon"></i
+            ><i class="fa-solid fa-microphone icon"></i>
           </div>
-          <form>
-            <input type="text" name="sms" />
-            <input type="submit" name="sent" />
-          </form>
-        </td>
-      </tr>
-    </table>
+        </form>
+      </div>
+    </div>
   </body>
+  <script
+    src="https://kit.fontawesome.com/11d538bce9.js"
+    crossorigin="anonymous"
+  ></script>
   <script src="../js/chat_pago.js"></script>
 </html>

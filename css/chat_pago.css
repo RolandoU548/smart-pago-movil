@@ -1,30 +1,114 @@
-.table__contact{
-    width: 100px;
+.chat__container {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
+  width: 250px;
+  max-width: 95%;
+  background-color: #202126;
+  border-radius: 20px;
 }
 
-.chat__sms{
-    border: 1px double #1681da;
-    margin: auto;
-    width: 500px;
-    max-width: 80%;
-    height: 100px;
+.chat__info {
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
 }
 
-.chat__box{
-    border: 1px double #1681da;
-    display: flex;
-    align-items: center;
-    text-align: center;
+.logo {
+  width: 30px;
+  height: auto;
+  object-fit: cover;
 }
 
-.msg__box{
-    display: flex;
-    align-items: center;
-    height: 675px;
+.chat {
+  height: 50vh;
 }
 
-.msg__context{
-    margin-inline-start: auto;
-    line-height: 3;
-    font-size: 16px;
+.message {
+  background-color: #29292b;
+  font-size: 0.6rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.plus__container {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
+.keyboard__container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.keyboard__form {
+  position: relative;
+  width: 80%;
+}
+
+.keyboard {
+  background-color: #29292b;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  outline: none;
+  color: white;
+  display: block;
+  width: 100%;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icons {
+  position: absolute;
+  display: flex;
+  gap: 0.5rem;
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+@media (max-width: 600px) {
+  .chat__container {
+    top: 5rem;
+  }
+  .logo {
+    width: 20px;
+  }
+  .chat__info {
+    font-size: 0.7rem;
+  }
+  .message {
+    font-size: 0.5rem;
+    padding: 5px;
+  }
+  .plus__container {
+    width: 14px;
+    height: 14px;
+    font-size: 0.6rem;
+  }
+  .keyboard__container {
+    font-size: 0.8rem;
+  }
+  .keyboard {
+    padding: 5px;
+    font-size: 0.7rem;
+  }
+  .icons {
+    top: 0.4rem;
+    right: 0.5rem;
+  }
 }
