@@ -66,8 +66,10 @@
 
 .comprobante div {
   width: 50%;
+  min-height: 100%;
   padding: 5px;
   border: solid white 1px;
+  display: flex;
 }
 
 .comprobante div:nth-child(odd) {
@@ -80,6 +82,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.icon {
+  margin-left: 5px;
 }
 
 #amount {
@@ -138,5 +144,8 @@
   .app__header,
   .back__button {
     font-size: 0.8rem;
+  }
+  .icon {
+    font-size: 0.6rem;
   }
 }

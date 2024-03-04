@@ -14,7 +14,7 @@ const codeValue = document.querySelector("#operation-code");
 codeValue.innerHTML = code;
 
 const copyButton = document.createElement("button");
-copyButton.innerHTML = "<i class='fa-regular fa-clipboard'></i>";
+copyButton.innerHTML = "<i class='fa-regular fa-clipboard icon'></i>";
 copyButton.style.background = "transparent";
 copyButton.style.border = "none";
 copyButton.style.color = "white";
@@ -22,7 +22,7 @@ copyButton.style.cursor = "pointer";
 codeValue.style.cursor = "pointer";
 codeValue.addEventListener("click", () => {
   navigator.clipboard.writeText(code);
-  copyButton.innerHTML = "<i class='fa-solid fa-check'></i>";
+  copyButton.innerHTML = "<i class='fa-solid fa-check icon'></i>";
   showToast("Copiado al portapapeles", "check");
 });
 codeValue.appendChild(copyButton);
