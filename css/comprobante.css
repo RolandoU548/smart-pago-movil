@@ -83,7 +83,8 @@
 }
 
 #amount {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 0px 30px white;
   margin: 1rem auto;
   border-radius: 10px;
   padding: 1rem;
