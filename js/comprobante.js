@@ -29,7 +29,7 @@ const phoneValue = document.querySelector("#phone");
 phoneValue.innerHTML = phone;
 
 const amountValue = document.querySelector("#amount");
-amountValue.innerHTML = amount + "bs";
+amountValue.innerHTML = amount + ",00bs";
 
 const paymentReasonValue = document.querySelector("#paymentReason");
 paymentReasonValue.innerHTML = paymentReason;

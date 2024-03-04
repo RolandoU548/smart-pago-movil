@@ -141,6 +141,9 @@ export const makePayment = (payment) => {
     showToast("Saldo Insuficiente", "error");
     return false;
   }
+  payment.paymentReason =
+    payment.paymentReason.charAt(0).toUpperCase() +
+    payment.paymentReason.slice(1).toLowerCase();
   localStorage.setItem("payment", JSON.stringify(payment));
   createUser(user.email, user.password, user.amount - payment.amount);
   window.location.href = "./comprobante.html";

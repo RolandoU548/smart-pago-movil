@@ -38,8 +38,8 @@ qrForm.addEventListener("submit", (e) => {
     showToast("Motivo Inválido", "error");
     return false;
   }
-  if (inputs[1].value.length > 30) {
-    showToast("Motivo debe ser inferior a 30 caracteres", "error");
+  if (inputs[1].value.length > 25) {
+    showToast("Motivo debe ser inferior a 25 caracteres", "error");
     return false;
   }
   const payment = {
