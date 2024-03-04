@@ -4,7 +4,7 @@
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 1rem;
-  width: 250px;
+  width: 350px;
   max-width: 95%;
   background-color: #202126;
   border-radius: 20px;
@@ -12,20 +12,20 @@
 
 .chat__info {
   display: flex;
-  font-size: 0.8rem;
   justify-content: space-between;
+  font-size: 0.9rem;
   align-items: center;
   padding: 15px;
 }
 
 .logo {
-  width: 30px;
+  width: 35px;
   height: auto;
   object-fit: cover;
 }
 
 .chat {
-  height: 50vh;
+  height: 60vh;
 }
 
 .message {
@@ -130,7 +130,6 @@
   }
   .chat {
     height: 60vh;
-    background-color: red;
   }
   .message {
     font-size: 0.7rem;
