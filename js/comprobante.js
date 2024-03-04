@@ -19,10 +19,11 @@ copyButton.style.background = "transparent";
 copyButton.style.border = "none";
 copyButton.style.color = "white";
 copyButton.style.cursor = "pointer";
-copyButton.addEventListener("click", () => {
+codeValue.style.cursor = "pointer";
+codeValue.addEventListener("click", () => {
   navigator.clipboard.writeText(code);
   copyButton.innerHTML = "<i class='fa-solid fa-check'></i>";
-  showToast("Copiado al Portapapeles", "check");
+  showToast("Copiado al portapapeles", "check");
 });
 codeValue.appendChild(copyButton);
 
