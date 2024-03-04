@@ -24,6 +24,7 @@
 }
 
 .msg__context{
+    margin-inline-start: auto;
     line-height: 3;
     font-size: 16px;
 }

@@ -1,5 +1,5 @@
 .table__contact{
-  width: 100px;
+  width: 80px;
 }
 
 .img__contact{
@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   max-width: 80%;
-  height: 600px;
+  height: 400px;
 }
 
 .text__context{
