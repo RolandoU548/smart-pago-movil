@@ -31,7 +31,7 @@ const handleSubmit = (e) => {
   }
   sendMessage(keyboard.value);
   receiveMessage("OK");
-  keyboardForm.reset();
+  keyboard.value = "";
 };
 
 keyboardForm.addEventListener("submit", handleSubmit);
