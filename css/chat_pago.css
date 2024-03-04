@@ -17,6 +17,11 @@
   align-items: center;
   padding: 15px;
 }
+.chat__info h3,
+.chat__info img,
+.icon {
+  cursor: pointer;
+}
 
 .logo {
   width: 35px;
@@ -68,10 +73,6 @@
   color: white;
   display: block;
   width: 100%;
-}
-
-.icon {
-  cursor: pointer;
 }
 
 .icons {

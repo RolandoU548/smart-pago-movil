@@ -28,6 +28,10 @@ const receiveMessage = (message) => {
   chat.scrollTop = chat.scrollHeight;
 };
 
+receiveMessage(
+  `El mensaje debe tener la siguiente estructura: "Pagar &lt;código de Banco del destinatario&gt;	&lt;número de teléfono del destinatario&gt; &lt;cédula del destinatario&gt; &lt;monto&gt;"`
+);
+
 const handleSubmit = (e) => {
   e.preventDefault();
   const userMessage = keyboard.value;
