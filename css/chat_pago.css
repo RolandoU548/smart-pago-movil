@@ -112,3 +112,52 @@
     right: 0.5rem;
   }
 }
+
+@media (max-width: 425px) {
+  .chat__container {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .logo {
+    width: 40px;
+  }
+  .chat__info {
+    font-size: 0.9rem;
+    height: 15vh;
+  }
+  .chat {
+    height: 60vh;
+    background-color: red;
+  }
+  .message {
+    font-size: 0.7rem;
+    height: 6vh;
+    padding: 10px;
+    position: fixed;
+    bottom: 10vh;
+    width: 100%;
+  }
+  .keyboard__container {
+    font-size: 1rem;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    bottom: 0;
+  }
+  .keyboard {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .plus__container {
+    width: 15px;
+    height: 15px;
+    font-size: 0.7rem;
+  }
+  .icons {
+    top: 0.4rem;
+    right: 0.5rem;
+  }
+}
