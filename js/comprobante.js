@@ -1,4 +1,4 @@
-import { getHeaderData, showNewAmount } from "./utils.js";
+import { getHeaderData, showNewAmount, showToast } from "./utils.js";
 
 getHeaderData();
 const back__button = document.querySelector(".back__button");
@@ -22,6 +22,7 @@ copyButton.style.cursor = "pointer";
 copyButton.addEventListener("click", () => {
   navigator.clipboard.writeText(code);
   copyButton.innerHTML = "<i class='fa-solid fa-check'></i>";
+  showToast("Copiado al Portapapeles", "check");
 });
 codeValue.appendChild(copyButton);
 
