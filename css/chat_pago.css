@@ -126,10 +126,10 @@
   }
   .chat__info {
     font-size: 0.9rem;
-    height: 15vh;
+    height: 10vh;
   }
   .chat {
-    height: 60vh;
+    height: 65vh;
   }
   .message {
     font-size: 0.7rem;
