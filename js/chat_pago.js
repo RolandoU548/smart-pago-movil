@@ -38,7 +38,7 @@ const handleSubmit = (e) => {
   sendMessage(userMessage);
   if (!messageRegex.test(userMessage)) {
     receiveMessage(
-      `El mensaje debe tener la siguiente estructura: "Pagar &lt;código de Banco del destinatario&gt;	&lt;número de teléfono del destinatario&gt; &lt;cédula del destinatario&gt; &lt;monto&gt;`
+      `El mensaje debe tener la siguiente estructura: "Pagar &lt;código de Banco del destinatario&gt;	&lt;número de teléfono del destinatario&gt; &lt;cédula del destinatario&gt; &lt;monto&gt;"`
     );
     return false;
   }

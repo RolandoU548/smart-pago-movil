@@ -1,4 +1,39 @@
-.table__contact {
+.chat__container {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
+  width: 350px;
+  max-width: 95%;
+  background-color: #202126;
+  border-radius: 20px;
+}
+
+.search__bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  width: 35px;
+  height: auto;
+  object-fit: cover;
+}
+
+.contact__logo {
+  width: 40px;
+  height: auto;
+  object-fit: cover;
+}
+
+.contacts__menu {
+  height: 600px;
+}
+/*.table__contact{
   width: 80px;
 }
 
