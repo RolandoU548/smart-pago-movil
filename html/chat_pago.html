@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TECNOLOGÍA SMS</title>
-        <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/chat_pago.css" />
-        <link rel="icon" href="../assets/sms.ico" type="image/x-icon" />
-    </head>
-    <body class="body-blue">
-        <header>
-            <h2>SMS</h2>
-            <button onclick="window.location.href='sms.html'">Regresar</button>
-        </header>
-        <table class="chat__sms">
-            <tr class="chat__box">
-                <td>
-                    <img src="../assets//logo.png" type="image/x-icon" class="table__contact">
-                    <h3>Smart Pago Movil</h3>
-                </td>
-            </tr>
-            <tr class="msg__box">
-                <td>
-                    <div class="msg__context">
-                        <h4><b>SMS: </b>Introduce: Código - Número - Cedula - Monto</h4>
-                    </div>
-                    <form>
-                        <input type="text" name="sms">
-                        <input type="submit" name="sent">
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECNOLOGÍA SMS</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/chat_pago.css" />
+    <link rel="icon" href="../assets/sms.ico" type="image/x-icon" />
+  </head>
+  <body class="body-blue">
+    <header>
+      <h2>SMS</h2>
+      <button onclick="window.location.href='sms.html'">Regresar</button>
+    </header>
+    <table class="chat__sms">
+      <tr class="chat__box">
+        <td>
+          <img
+            src="../assets//logo.png"
+            type="image/x-icon"
+            class="table__contact"
+          />
+          <h3>Smart Pago Movil</h3>
+        </td>
+      </tr>
+      <tr class="msg__box">
+        <td>
+          <div class="msg__context">
+            <h4><b>SMS: </b>Introduce: Código - Número - Cedula - Monto</h4>
+          </div>
+          <form>
+            <input type="text" name="sms" />
+            <input type="submit" name="sent" />
+          </form>
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script src="../js/chat_pago.js"></script>
 </html>

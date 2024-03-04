@@ -94,7 +94,16 @@
   position: absolute;
 }
 
+.logo-main {
+  width: 20px;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (max-width: 600px) {
+  .logo-main {
+    display: none;
+  }
   .landing_page {
     height: 90vh;
   }
