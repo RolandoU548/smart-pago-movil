@@ -186,7 +186,7 @@
 .message.incoming {
   background-color: #2a2a2a;
   align-self: flex-start;
-  animation: appearFromLeft 600ms ease-out;
+  animation: appearFromLeft 500ms ease-out;
 }
 
 .message.incoming::before {
@@ -204,7 +204,7 @@
   color: black;
   background-color: #7d9fdc;
   align-self: flex-end;
-  animation: appearFromRight 600ms ease-out;
+  animation: appearFromRight 500ms ease-out;
 }
 
 .message.outgoing::before {
