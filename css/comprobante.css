@@ -131,7 +131,8 @@
 }
 
 .back__link:hover {
-  color: rgb(220, 220, 220);
+  transition: color 300ms;
+  color: rgb(240, 240, 240);
 }
 
 @media (max-width: 600px) {
