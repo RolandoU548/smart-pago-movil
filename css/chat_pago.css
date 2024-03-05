@@ -185,7 +185,7 @@
 }
 
 .message.incoming {
-  background-color: red;
+  background-color: #2a2a2a;
   align-self: flex-start;
   animation: appearFromLeft 800ms ease-out;
 }
@@ -194,15 +194,16 @@
   left: -10px;
   background: linear-gradient(
     225deg,
-    red 0%,
-    red 50%,
+    #2a2a2a 0%,
+    #2a2a2a 50%,
     transparent 50%,
     transparent
   );
 }
 
 .message.outgoing {
-  background-color: blue;
+  color: black;
+  background-color: #7d9fdc;
   align-self: flex-end;
   animation: appearFromRight 800ms ease-out;
 }
@@ -211,8 +212,8 @@
   right: -10px;
   background: linear-gradient(
     135deg,
-    blue 0%,
-    blue 50%,
+    #7d9fdc 0%,
+    #7d9fdc 50%,
     transparent 50%,
     transparent
   );
