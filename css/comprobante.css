@@ -47,7 +47,7 @@
 .comprobante {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   max-width: 90%;
   width: 900px;
