@@ -31,6 +31,7 @@ const receiveMessage = (message) => {
 receiveMessage(
   `El mensaje debe tener la siguiente estructura: "Pagar &lt;código de Banco del destinatario&gt;	&lt;número de teléfono del destinatario&gt; &lt;cédula del destinatario&gt; &lt;monto&gt;"`
 );
+receiveMessage(`Por ejemplo: "Pagar 0102 04240170091 27312039 30"`);
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -41,39 +42,44 @@ const handleSubmit = (e) => {
     return false;
   }
   sendMessage(userMessage);
-  if (!messageRegex.test(userMessage)) {
+  setTimeout(() => {
+    if (!messageRegex.test(userMessage)) {
+      receiveMessage(
+        `El mensaje debe tener la siguiente estructura: "Pagar &lt;código de Banco del destinatario&gt;	&lt;número de teléfono del destinatario&gt; &lt;cédula del destinatario&gt; &lt;monto&gt;"`
+      );
+      receiveMessage(`Por ejemplo: "Pagar 0102 04240170091 27312039 30"`);
+      return false;
+    }
+    const userMessages = userMessage.split(" ");
+    if (!phoneRegex.test(userMessages[2])) {
+      receiveMessage("Télefono Inválido");
+      return false;
+    }
+    if (userMessages[3] < 1 || userMessages[3] > 33000000) {
+      receiveMessage("Cédula Inválida");
+      return false;
+    }
+    if (userMessages[4] < 1) {
+      receiveMessage("Monto Inválido");
+      return false;
+    }
+    if (userMessages[4] > 1000000) {
+      receiveMessage("El monto máximo es de un millón");
+      return false;
+    }
+    if (userMessages[4] > actualAmount) {
+      receiveMessage(
+        `Saldo insuficiente. Su saldo actual: ${actualAmount},00bs`
+      );
+      return false;
+    }
+    localStorage.setItem("amountSMS", actualAmount - userMessages[4]);
     receiveMessage(
-      `El mensaje debe tener la siguiente estructura: "Pagar &lt;código de Banco del destinatario&gt;	&lt;número de teléfono del destinatario&gt; &lt;cédula del destinatario&gt; &lt;monto&gt;"`
+      `Pago realizado con éxito. Código de Operación: ${generateOperationCode()}. Monto: ${
+        userMessages[4]
+      },00bs`
     );
-    return false;
-  }
-  const userMessages = userMessage.split(" ");
-  if (!phoneRegex.test(userMessages[2])) {
-    receiveMessage("Télefono Inválido");
-    return false;
-  }
-  if (userMessages[3] < 1 || userMessages[3] > 33000000) {
-    receiveMessage("Cédula Inválida");
-    return false;
-  }
-  if (userMessages[4] < 1) {
-    receiveMessage("Monto Inválido");
-    return false;
-  }
-  if (userMessages[4] > 1000000) {
-    receiveMessage("El monto máximo es de un millón");
-    return false;
-  }
-  if (userMessages[4] > actualAmount) {
-    receiveMessage(`Saldo insuficiente. Su saldo actual: ${actualAmount},00bs`);
-    return false;
-  }
-  localStorage.setItem("amountSMS", actualAmount - userMessages[4]);
-  receiveMessage(
-    `Pago realizado con éxito. Código de Operación: ${generateOperationCode()}. Monto: ${
-      userMessages[4]
-    },00bs`
-  );
+  }, 1000);
 };
 
 keyboardForm.addEventListener("submit", handleSubmit);

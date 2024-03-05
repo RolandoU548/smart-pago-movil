@@ -134,7 +134,6 @@
 }
 
 .chat {
-  gap: 1rem;
   overflow-y: auto;
 }
 
@@ -146,7 +145,7 @@
 
 .message {
   max-width: 60%;
-  margin: 1rem;
+  margin: 0.5rem 1rem;
   padding: 5px;
   border-radius: 10px;
   position: relative;
@@ -187,7 +186,7 @@
 .message.incoming {
   background-color: #2a2a2a;
   align-self: flex-start;
-  animation: appearFromLeft 700ms ease-out;
+  animation: appearFromLeft 600ms ease-out;
 }
 
 .message.incoming::before {
@@ -205,7 +204,7 @@
   color: black;
   background-color: #7d9fdc;
   align-self: flex-end;
-  animation: appearFromRight 700ms ease-out;
+  animation: appearFromRight 600ms ease-out;
 }
 
 .message.outgoing::before {
