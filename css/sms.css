@@ -22,6 +22,11 @@
   width: 35px;
   height: auto;
   object-fit: cover;
+  align-items: self-start;
+}
+
+.contact {
+  padding: 10px 20px 10px 10px;
 }
 
 .contact__logo {
@@ -33,6 +38,11 @@
 .contacts__menu {
   height: 600px;
 }
+
+.date {
+  margin-left: 280px;
+}
+
 /*.table__contact{
   width: 80px;
 }
