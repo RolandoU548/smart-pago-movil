@@ -142,6 +142,7 @@
 .message__container {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .message {
@@ -151,19 +152,30 @@
   border-radius: 10px;
   position: relative;
   word-wrap: break-word;
-  animation: appearFromBottom 1s forwards;
 }
 
-@keyframes appearFromBottom {
+@keyframes appearFromLeft {
   from {
-    transform: translateY(100%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
-    transform: translateY(0%);
+    transform: translateX(0%);
     opacity: 1;
   }
 }
+
+@keyframes appearFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 .message::before {
   content: "";
   position: absolute;
@@ -176,6 +188,7 @@
 .message.incoming {
   background-color: red;
   align-self: flex-start;
+  animation: appearFromLeft 800ms ease-out;
 }
 
 .message.incoming::before {
@@ -192,6 +205,7 @@
 .message.outgoing {
   background-color: blue;
   align-self: flex-end;
+  animation: appearFromRight 800ms ease-out;
 }
 
 .message.outgoing::before {
