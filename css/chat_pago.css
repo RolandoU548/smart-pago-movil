@@ -149,7 +149,17 @@
   margin: 1rem;
   padding: 5px;
   border-radius: 10px;
+  position: relative;
   word-wrap: break-word;
+}
+
+.message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  z-index: -10;
 }
 
 .message.incoming {
@@ -157,9 +167,31 @@
   align-self: flex-start;
 }
 
-.message.outcoming {
+.message.incoming::before {
+  left: -10px;
+  background: linear-gradient(
+    225deg,
+    red 0%,
+    red 50%,
+    transparent 50%,
+    transparent
+  );
+}
+
+.message.outgoing {
   background-color: blue;
   align-self: flex-end;
+}
+
+.message.outgoing::before {
+  right: -10px;
+  background: linear-gradient(
+    135deg,
+    blue 0%,
+    blue 50%,
+    transparent 50%,
+    transparent
+  );
 }
 
 .submit {
