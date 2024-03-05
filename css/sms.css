@@ -31,26 +31,91 @@
   font-size: 1.2rem;
 }
 
-.logo {
+.smsIMG {
   width: 40px;
   height: 40px;
   object-fit: cover;
-}
-
-.contact {
-  padding: 10px 20px 10px 10px;
-}
-
-.contact__logo {
-  width: 40px;
-  height: auto;
-  object-fit: cover;
+  filter: invert(100%);
 }
 
 .contacts__menu {
-  height: 600px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding-left: 0.5rem;
+}
+
+.contact {
+  display: flex;
+}
+
+.image__container {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileIMG {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.chat {
+  width: 70%;
+  padding: 10px;
+}
+
+.chat p {
+  margin-top: 3px;
+  font-size: 0.7rem;
 }
 
 .date {
-  margin-left: 280px;
+  width: 15%;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.start__chat {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 40%;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: black;
+  background-color: #8ab5f9;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.start__chat i {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 425px) {
+  .chat__container {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .contacts__menu {
+    height: 70vh;
+  }
+  .search__bar {
+    border-radius: 0px;
+  }
 }
