@@ -151,8 +151,19 @@
   border-radius: 10px;
   position: relative;
   word-wrap: break-word;
+  animation: appearFromBottom 1s forwards;
 }
 
+@keyframes appearFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 .message::before {
   content: "";
   position: absolute;
