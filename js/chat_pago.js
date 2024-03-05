@@ -13,7 +13,7 @@ const phoneRegex = /^04(12|14|16|24|26)\d{7}$/;
 const sendMessage = (message) => {
   const messageDiv = document.createElement("div");
   messageDiv.classList.add("message");
-  messageDiv.classList.add("outcoming");
+  messageDiv.classList.add("outgoing");
   messageDiv.innerHTML = message;
   messageContainer.appendChild(messageDiv);
   chat.scrollTop = chat.scrollHeight;
