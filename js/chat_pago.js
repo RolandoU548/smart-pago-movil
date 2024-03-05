@@ -32,6 +32,7 @@ receiveMessage(
   `El mensaje debe tener la siguiente estructura: "Pagar &lt;código de Banco del destinatario&gt;	&lt;número de teléfono del destinatario&gt; &lt;cédula del destinatario&gt; &lt;monto&gt;"`
 );
 receiveMessage(`Por ejemplo: "Pagar 0102 04240170091 27312039 30"`);
+receiveMessage(`Envie el mensaje "Saldo" para consultar su saldo actual`);
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -43,6 +44,10 @@ const handleSubmit = (e) => {
   }
   sendMessage(userMessage);
   setTimeout(() => {
+    if (userMessage.toLowerCase() === "saldo") {
+      receiveMessage(`Su saldo actual es: ${actualAmount},00bs`);
+      return true;
+    }
     if (!messageRegex.test(userMessage)) {
       receiveMessage(
         `El mensaje debe tener la siguiente estructura: "Pagar &lt;código de Banco del destinatario&gt;	&lt;número de teléfono del destinatario&gt; &lt;cédula del destinatario&gt; &lt;monto&gt;"`
