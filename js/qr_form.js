@@ -1,16 +1,3 @@
-import {
-  checkLogIn,
-  generateOperationCode,
-  getActualDate,
-  getActualHour,
-  generateRandomBank,
-  generateRandomCedula,
-  generateRandomNumber,
-  makePayment,
-  getHeaderData,
-  showToast,
-} from "./utils.js";
-
 checkLogIn();
 getHeaderData();
 const back__button = document.querySelector(".back__button");

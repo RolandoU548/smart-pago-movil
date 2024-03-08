@@ -1,12 +1,3 @@
-import {
-  checkLogIn,
-  showToast,
-  generateOperationCode,
-  getActualDate,
-  getActualHour,
-  makePayment,
-  getHeaderData,
-} from "./utils.js";
 checkLogIn();
 getHeaderData();
 

@@ -1,9 +1,3 @@
-import {
-  checkLogIn,
-  getHeaderData,
-  showNewAmount,
-  showToast,
-} from "./utils.js";
 checkLogIn();
 getHeaderData();
 const back__button = document.querySelector(".back__button");

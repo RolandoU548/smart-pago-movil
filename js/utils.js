@@ -1,4 +1,4 @@
-export const showToast = (texto, iconP = "") => {
+const showToast = (texto, iconP = "") => {
   const toast = document.createElement("div");
   toast.classList.add("toast");
   let icon = "";
@@ -26,7 +26,7 @@ export const showToast = (texto, iconP = "") => {
   }, 4000);
 };
 
-export const findUser = (email) => {
+const findUser = (email) => {
   let key;
   for (let i = 0; i < localStorage.length; i++) {
     key = localStorage.key(i);
@@ -37,13 +37,13 @@ export const findUser = (email) => {
   return false;
 };
 
-export const checkLogIn = () => {
+const checkLogIn = () => {
   if (!(localStorage.getItem("logged") == "true")) {
     window.location.href = "../index.html";
   }
 };
 
-export const createUser = (email, password, amount = 500) => {
+const createUser = (email, password, amount = 500) => {
   const user = {
     email,
     password,
@@ -52,18 +52,18 @@ export const createUser = (email, password, amount = 500) => {
   localStorage.setItem(email, JSON.stringify(user));
 };
 
-export const logIn = (email) => {
+const logIn = (email) => {
   localStorage.setItem("logged", "true");
   localStorage.setItem("loggedFirstTime", "true");
   localStorage.setItem("actualUser", email);
   window.location.href = "./app.html";
 };
 
-export const getActualUser = () => {
+const getActualUser = () => {
   return findUser(localStorage.getItem("actualUser"));
 };
 
-export const logOut = () => {
+const logOut = () => {
   localStorage.removeItem("logged");
   localStorage.removeItem("loggedFirstTime");
   localStorage.setItem("loggedOut", "true");
@@ -72,12 +72,12 @@ export const logOut = () => {
   window.location.href = "../index.html";
 };
 
-export const getActualDate = () => {
+const getActualDate = () => {
   const today = new Date(Date.now());
   return `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
 };
 
-export const getActualHour = () => {
+const getActualHour = () => {
   const today = new Date(Date.now());
   let hours = today.getHours();
   const ampm = hours >= 12 ? "PM" : "AM";
@@ -86,7 +86,7 @@ export const getActualHour = () => {
   return `${hours}:${String(today.getMinutes()).padStart(2, "0")}${ampm}`;
 };
 
-export const generateOperationCode = () => {
+const generateOperationCode = () => {
   let code = "0";
   for (let i = 1; i < 12; i++) {
     code += String(Math.floor(Math.random() * 8) + 1);
@@ -94,7 +94,7 @@ export const generateOperationCode = () => {
   return code;
 };
 
-export const generateRandomBank = () => {
+const generateRandomBank = () => {
   const banks = [
     "BBVA Provincial",
     "Bancamiga",
@@ -124,18 +124,18 @@ export const generateRandomBank = () => {
   return banks[Math.floor(Math.random() * banks.length)];
 };
 
-export const generateRandomCedula = () => {
+const generateRandomCedula = () => {
   return Math.floor(Math.random() * 32000000) + 1;
 };
 
-export const generateRandomNumber = () => {
+const generateRandomNumber = () => {
   const numbers = ["0412", "0424", "0426", "0414", "0416"];
   return `${numbers[Math.floor(Math.random() * numbers.length)]}-${
     Math.floor(Math.random() * 9000000) + 1000000
   }`;
 };
 
-export const makePayment = (payment) => {
+const makePayment = (payment) => {
   const user = getActualUser();
   if (payment.amount > user.amount) {
     showToast("Saldo Insuficiente", "error");
@@ -150,7 +150,7 @@ export const makePayment = (payment) => {
   return true;
 };
 
-export const getHeaderData = () => {
+const getHeaderData = () => {
   const user = getActualUser();
   const spanEmail = document.querySelector(".span__email");
   const spanAmount = document.querySelector(".span__amount");
@@ -159,6 +159,6 @@ export const getHeaderData = () => {
   spanAmount.innerHTML = `${user.amount}bs`;
 };
 
-export const showNewAmount = () => {
+const showNewAmount = () => {
   showToast(`Saldo Restante: ${getActualUser().amount}bs`, "check");
 };

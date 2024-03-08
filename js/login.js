@@ -1,5 +1,3 @@
-import { findUser, logIn, showToast } from "./utils.js";
-
 const inputEmail = document.getElementById("email");
 const inputPassword = document.getElementById("password");
 const form = document.querySelector(".login__form");

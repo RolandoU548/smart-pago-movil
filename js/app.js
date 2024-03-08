@@ -1,4 +1,3 @@
-import { logOut, showToast, checkLogIn, getHeaderData } from "./utils.js";
 checkLogIn();
 
 if (localStorage.getItem("loggedFirstTime") == "true") {

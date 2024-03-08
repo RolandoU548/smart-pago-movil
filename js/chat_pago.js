@@ -1,5 +1,3 @@
-import { generateOperationCode } from "./utils.js";
-
 const usuario = { nombre: "juan", apellido: "beli" };
 usuario.nombre;
 
