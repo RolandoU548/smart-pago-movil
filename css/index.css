@@ -56,16 +56,6 @@
   text-align: center;
 }
 
-.login_link,
-.signup_link {
-  text-decoration: none;
-}
-
-.login_link:hover,
-.signup_link:hover {
-  color: #00f2ff;
-}
-
 .navbar_button {
   min-width: 5rem;
   padding: 0.8rem;
