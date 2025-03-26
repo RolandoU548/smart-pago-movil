@@ -4,7 +4,7 @@
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 1rem;
-  width: 350px;
+  width: calc(85vh * (9/16));
   max-width: 95%;
   background-color: #202126;
   border-radius: 20px;
