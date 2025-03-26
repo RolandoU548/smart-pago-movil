@@ -12,6 +12,7 @@
 
 .chat__info {
   display: flex;
+  height: 10vh;
   justify-content: space-between;
   font-size: 0.9rem;
   align-items: center;
@@ -30,10 +31,11 @@
 }
 
 .chat {
-  height: 400px;
+  height: 70vh;
 }
 
 .info {
+  height: 5vh;
   background-color: #29292b;
   font-size: 0.7rem;
   padding: 10px;
@@ -54,6 +56,7 @@
 .keyboard__container {
   padding: 10px;
   display: flex;
+  height: 5vh;
   justify-content: space-between;
   align-items: center;
 }
